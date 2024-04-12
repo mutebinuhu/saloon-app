@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang=" str_replace('_', '-', app()->getLocale()) ">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>My saloon</title>
+        
+        <link rel="stylesheet" href="/app.css">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+
+        <!-- Styles -->
+        <style>
+        </style>
+    </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <body class="font-sans antialiased dark:bg-black dark:text-white/50">
+   
+    <div class="">
+
+    <div class="w-full h-96 bg-gray-300 bg-[url('images/barber.jpg')] bg-cover bg-center">
+    <nav class=" p-4">
+        <div class="flex items-center justify-between">
+            <!-- Navigation Icon -->
+            <div class="flex items-center">
+                <button class=" text-white focus:outline-none mr-4">
+                    <!-- Your navigation icon here (e.g., hamburger icon) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <!-- Logo -->
+            <!--<div class="flex items-center justify-center flex-1">
+                <a href="#" class="text-white text-2xl font-bold"><img src=" 'images/scissors.png " class="h-12 w-12"> </a>
+            </div>
+            <!-->
+            <!-- Contact Us Button -->
+            
+            <ul class="hidden text-white space-x-3 md:flex">
+                <li class="p-4 hover:bg-red-500 ">
+                   <a href="#" >
+                   Home
+                   </a>
+                </li>
+                <li class="p-4  hover:bg-red-500">
+                    Booking
+                </li>
+                <li class="p-4  hover:bg-red-500">
+                    About
+                </li>
+                <li class="p-4   hover:bg-red-500 ">
+                    Contact
+                </li>
+                <li class="book-online p-4 bg-red-600 ">
+                  
+                        Book Online
+                   
+                </li>
+            </ul>
+        </div>
+    </nav>
+          <section class="mt-12 p-4 text-white text-center md:text-left">
+            <h1 x-data="{message: Welcome Home}" class="text-4xl font-bold ">Do You need a quick Hair Cut ? </h1>
+            <p class="pt-4 ">We offer the full spectrum of professional services in <span class="font-bold text-2xl">Kampala</span></p>
+            <div class="mt-12 md:mt-18">
+            <a class="bg-red-600 text-white  text-sm font-bold p-4 " href="#">
+               BOOK FREE APPOINTMENT
+            </a>
+            </div>
+            
+          </section>
+           
+      </div>
+    </div>
+        <div class="">
+            <div class="">
+                <div class="">
+                    <!--<header class="grid grid-cols-2 items-center gap-2 py-10 lg:grid-cols-3"> 
+                        @if (Route::has('login)
+                            <nav class="-mx-3 flex flex-1 justify-end">
+                                @auth
+                                    <a
+                                        href=" url('/dashboard "
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                    >
+                                        Dashboard
+                                    </a>
+                                @else
+                                    <a
+                                        href=" route('login "
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                    >
+                                        Log in
+                                    </a>
+
+                                    @if (Route::has('register)
+                                        <a
+                                            href=" route('register "
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
+                                        >
+                                            Register
+                                        </a>
+                                    @endif
+                                @endauth
+                            </nav>
+                        @endif
+                    </header>
+-->
+
+                    <main class="">
+                        <div class="bg-slate-800 p-8 md:p-24 text-white md:flex md:space-x-12">
+                            <div class="bg-white h-96 md:w-1/2 bg-[url('images/barber2.jpg')]  bg-cover bg-center">
+                            </div>
+                            <div class="md:w-1/2 md:flex text-center md:items-center p-8 md:p-0">
+                                <section>
+                                <h2 class="font-bold text-3xl md:p-4">Why Choose Us</h2>
+                                <p>
+                                Our team of professional stylists is just a click away. With years of experience and expertise, they're dedicated to helping you achieve your desired look effortlessly.
+                                </p>
+                                <div class="mt-12">
+                                <a class="bg-red-600 text-white  text-sm font-bold p-4 " href="#">
+                                    <button> BOOK FREE APPOINTMENT</button>
+                                </a>
+                                </div>
+                                </section>
+                                
+                            </div>
+                        </div>
+                        <!--appointement--->
+                    <section>
+                    <div class="bg-slate-800">
+                        <h2 class="text-3xl font-bold text-center mb-8 text-white pb-3">Our Services</h2>
+                        <div class="flex flex-wrap">
+                            <div class="w-full md:w-1/3 px-4 mb-8 ">
+                            <div class="bg-white rounded-lg shadow-lg p-6 ">
+                                <div class="text-center mb-4">
+                                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-4">
+                                <img class="w-32 h-32 rounded-full object-cover" src="https://images.pexels.com/photos/7697394/pexels-photo-7697394.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+
+                                </div>
+                                <h3 class="text-xl font-semibold">Haircut and Styling</h3>
+                                </div>
+                                <p class="text-gray-700 text-center">We trim, cut and  restyle your hair to achieve the desired look. Please book now and get 50% discount off</p>
+                            </div>
+                            </div>
+                            <div class="w-full md:w-1/3 px-4 mb-8">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <div class="text-center mb-4">
+                                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-4 bg-[url('/img/hero-pattern.svg')]">
+                                    <img class="w-32 h-32 rounded-full object-cover" src="images/pedicure.jpg" alt="">
+                                </div>
+                                <h3 class="text-xl font-semibold">Pedicure & Manicure</h3>
+                                </div>
+                                <p class="text-gray-700 text-center">Lets  focus on enhancing the appearance and health of your nails and surrounding skin. Please Book Now and we shall Reach in Minutes</p>
+                            </div>
+                            </div>
+                            <div class="w-full md:w-1/3 px-4 mb-8">
+                            <div class="bg-white rounded-lg shadow-lg p-6">
+                                <div class="text-center mb-4">
+                                <div class="w-32 h-32 bg-gray-300 mx-auto rounded-full mb-4">
+                                <img class="w-32 h-32 rounded-full object-cover" src="images/manicure.jpg" alt="">
+
+                                </div>
+                                <h3 class="text-xl font-semibold">Facial Treatments</h3>
+                                </div>
+                                <p class="text-gray-700">We have a professional team responsible for facial treatments aiming to improve the overall health and appearance of your skin </p>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+
+                    </section>
+
+
+                    <section class="py-20 team-section bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold  mb-10 text-center text-white">Our Team</h2>
+            <div class="flex flex-wrap -mx-4">
+                <!-- Team Member Card 1 -->
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white  rounded-lg overflow-hidden shadow-md ">
+                        <img src="images/barberim1.jpg" alt="Team Member" class="w-full">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold mb-2 ">John Does</h3>
+                            <p class="text-gray-700">Position: Hair Stylist</p>
+                            <p class="text-gray-700">Experience: 5 years</p>
+                           
+                        </div>
+                        
+                    </div>
+                    <div class="text-center">
+                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
+                                    BOOK FREE APPOINTMENT
+                            </a>
+                    </div>
+                </div>
+                <!-- Team Member Card 2 -->
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="images/barberim2.jpg" alt="Team Member" class="w-full">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold mb-2">Jane Smith</h3>
+                            <p class="text-gray-700">Position: Scissor Master</p>
+                            <p class="text-gray-700">Experience: 7 years</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
+                                    BOOK FREE APPOINTMENT
+                            </a>
+                    </div>
+                </div>
+                <!-- Team Member Card 3 -->
+                <div class="w-full sm:w-1/2 lg:w-1/3 px-4 mb-8">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md">
+                        <img src="images/barberim3.jpg" alt="Team Member" class="w-full">
+                        <div class="p-6 text-center">
+                            <h3 class="text-xl font-bold mb-2">Nails Technician</h3>
+                            <p class="text-gray-700">Position: Marketing Manager</p>
+                            <p class="text-gray-700">Experience: 8 years</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
+                                    BOOK FREE APPOINTMENT
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-800">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-10 text-white">Customer Reviews</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review Card 1 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-gray-300 mx-2 rounded-full mb-4 bg-[url('/img/hero-pattern.svg')]">
+                                    <img class="w-16 h-16 rounded-full object-cover" src="images/asian.jpg" alt="">
+                                </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">John Doe</h3>
+                            <div class="flex items-center mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 mr-1"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 1.462l1.718 4.686H18.75a.75.75 0 01.75.75v1.332a.75.75 0 01-.222.53l-4.098 3.375 1.545 5.513a.75.75 0 01-.78.98l-4.94-.914-1.93 4.545a.75.75 0 01-1.387-.002L6.3 16.282l-4.938.914a.75.75 0 01-.779-.98l1.545-5.513L1.472 7.76a.75.75 0 01-.222-.53V6.898a.75.75 0 01.75-.75h5.032L10 1.462zM10 0l1.718 4.686L16.768 6.75l-4.098 3.375 1.545 5.513L10 13.138l-4.215 2.5 1.545-5.513-4.098-3.375L3.23 4.686 5.948 0h8.104z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-600">4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce vitae
+                        semper lorem. Integer auctor sapien ac nisi eleifend convallis. Suspendisse potenti.</p>
+                </div>
+                <!-- Review Card 2 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-gray-300 mx-2 rounded-full mb-4 bg-[url('/img/hero-pattern.svg')]">
+                                    <img class="w-16 h-16 rounded-full object-cover" src="images/asian.jpg" alt="">
+                                </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Jane Smith</h3>
+                            <div class="flex items-center mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 mr-1"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 1.462l1.718 4.686H18.75a.75.75 0 01.75.75v1.332a.75.75 0 01-.222.53l-4.098 3.375 1.545 5.513a.75.75 0 01-.78.98l-4.94-.914-1.93 4.545a.75.75 0 01-1.387-.002L6.3 16.282l-4.938.914a.75.75 0 01-.779-.98l1.545-5.513L1.472 7.76a.75.75 0 01-.222-.53V6.898a.75.75 0 01.75-.75h5.032L10 1.462zM10 0l1.718 4.686L16.768 6.75l-4.098 3.375 1.545 5.513L10 13.138l-4.215 2.5 1.545-5.513-4.098-3.375L3.23 4.686 5.948 0h8.104z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-600">4.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Nullam vehicula, sem sed gravida ultricies, sem nisl bibendum magna,
+                        vitae efficitur mauris leo vitae neque.</p>
+                </div>
+                <!-- Review Card 3 -->
+                <div class="bg-white rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="flex items-center mb-4">
+                    <div class="w-16 h-16 bg-gray-300 mx-2 rounded-full mb-4 bg-[url('/img/hero-pattern.svg')]">
+                                    <img class="w-16 h-16 rounded-full object-cover" src="images/asian.jpg" alt="">
+                                </div>
+                        <div>
+                            <h3 class="text-lg font-semibold">Michael Johnson</h3>
+                            <div class="flex items-center mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-yellow-500 mr-1"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M10 1.462l1.718 4.686H18.75a.75.75 0 01.75.75v1.332a.75.75 0 01-.222.53l-4.098 3.375 1.545 5.513a.75.75 0 01-.78.98l-4.94-.914-1.93 4.545a.75.75 0 01-1.387-.002L6.3 16.282l-4.938.914a.75.75 0 01-.779-.98l1.545-5.513L1.472 7.76a.75.75 0 01-.222-.53V6.898a.75.75 0 01.75-.75h5.032L10 1.462zM10 0l1.718 4.686L16.768 6.75l-4.098 3.375 1.545 5.513L10 13.138l-4.215 2.5 1.545-5.513-4.098-3.375L3.23 4.686 5.948 0h8.104z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span class="text-gray-600">4.2</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+                        cubilia Curae; Nunc ultricies tellus at justo finibus aliquet.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--contact us-->
+    <section class="bg-slate-800 py-10 ">
+    <h2 class="text-4xl font-bold text-center mb-10 text-white">Contact Us</h2>
+    <div class="md:flex justify-between  items-center">
+    <div class="md:w-1/2">
+    
+                            <div class="md:flex text-center text-gray-100 md:items-center md:p-4 ">
+                                <section>
+                                <p>
+                                Have questions, or ready to book your appointment? Reach out to us today using the form below. We can't wait to hear from you and embark on this beauty journey together!
+                                </p>
+                               
+                                </section>
+                                
+                            </div>
+    </div>
+    <div class="md:w-1/2 mt-8 mx-4 md:mt-0 md:mx-0">
+        <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
+            <form>
+                <div class="mb-4">
+                    <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
+                    <input type="text" id="name" name="name" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" id="email" name="email" autocomplete="email" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" autocomplete="tel" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+                <div class="text-center">
+                <div class="mt-12">
+                              
+                                </div>
+                    <button type="submit" class="bg-red-600 text-white  text-sm font-bold p-4 inline-flex justify-center py-3 px-6 w-full border border-transparent shadow-sm text-sm font-medium  text-white bg-indigo-600 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</section>
+    <!--contact us-->
+                    
+                    </main>
+                  
+                       
+
+                    <footer class=" py-12 border-b bg-zinc-600	text-white">
+        <div class="container mx-auto flex flex-col md:flex-row  justify-between items-center px-4">
+            <div class="mb-4 md:mb-0">
+                <h3 class="text-2xl font-semibold">Mobile Saloon</h3>
+                <p class="mt-2">Kampala , Uganda</p>
+                <p class="mt-1">Phone: +25675-----</p>
+                <p class="mt-1">Email: Email@email.com</p>
+            </div>
+            <div>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="hover:text-gray-400">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-400">About</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Contact Us</a></li>
+                    <li><a href="#" class="hover:text-gray-400">Book Now</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+                </div>
+            </div>
+        <p class=" text-center bg-slate-800 p-1  text-white">All right reserved copyright @2024 |Mobile Saloon</p>
+
+        </div>
+    </body>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
+
+</html>
