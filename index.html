@@ -28,12 +28,13 @@
         <div class="flex items-center justify-between">
             <!-- Navigation Icon -->
             <div class="flex items-center">
-                <button class=" text-white focus:outline-none mr-4">
+                <button class="transition ease-in-out duration-300  hover:text-gray-400  text-white focus:outline-none mr-4">
                     <!-- Your navigation icon here (e.g., hamburger icon) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
                 </button>
+                
             </div>
             <!-- Logo -->
             <!--<div class="flex items-center justify-center flex-1">
@@ -57,7 +58,7 @@
                 <li class="p-4   hover:bg-red-500 ">
                     Contact
                 </li>
-                <li class="book-online p-4 bg-red-600 ">
+                <li class="book-online p-4 bg-red-600 transition ease-in-out duration-300 delay-100 hover:-translate-y-1  hover:bg-red-500 hover:scale-110 ">
                   
                         Book Online
                    
@@ -69,9 +70,9 @@
             <h1 x-data="{message: Welcome Home}" class="text-4xl font-bold ">Do You need a quick Hair Cut ? </h1>
             <p class="pt-4 ">We offer the full spectrum of professional services in <span class="font-bold text-2xl">Kampala</span></p>
             <div class="mt-12 md:mt-18">
-            <a class="bg-red-600 text-white  text-sm font-bold p-4 " href="#">
+            <button class="bg-red-600 transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4 " href="#">
                BOOK FREE APPOINTMENT
-            </a>
+            </button>
             </div>
             
           </section>
@@ -85,7 +86,7 @@
                         @if (Route::has('login)
                             <nav class="-mx-3 flex flex-1 justify-end">
                                 @auth
-                                    <a
+                        bg            <a
                                         href=" url('/dashboard "
                                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
@@ -124,9 +125,8 @@
                                 Our team of professional stylists is just a click away. With years of experience and expertise, they're dedicated to helping you achieve your desired look effortlessly.
                                 </p>
                                 <div class="mt-12">
-                                <a class="bg-red-600 text-white  text-sm font-bold p-4 " href="#">
-                                    <button> BOOK FREE APPOINTMENT</button>
-                                </a>
+                                    <button class="bg-red-600 transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4"> BOOK FREE APPOINTMENT</button>
+                               
                                 </div>
                                 </section>
                                 
@@ -195,9 +195,9 @@
                         
                     </div>
                     <div class="text-center">
-                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
+                    <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
                                     BOOK FREE APPOINTMENT
-                            </a>
+                    </button>
                     </div>
                 </div>
                 <!-- Team Member Card 2 -->
@@ -211,9 +211,9 @@
                         </div>
                     </div>
                     <div class="text-center">
-                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
-                                    BOOK FREE APPOINTMENT
-                            </a>
+                        <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
+                            BOOK FREE APPOINTMENT
+            </button>
                     </div>
                 </div>
                 <!-- Team Member Card 3 -->
@@ -227,9 +227,9 @@
                         </div>
                     </div>
                     <div class="text-center">
-                    <a class="bg-red-600 text-white   text-sm font-bold p-4 " href="#">
-                                    BOOK FREE APPOINTMENT
-                            </a>
+                        <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
+                            BOOK FREE APPOINTMENT
+            </button>
                     </div>
                 </div>
             </div>
@@ -345,9 +345,8 @@
                 </div>
                 <div class="text-center">
                 <div class="mt-12">
-                              
                                 </div>
-                    <button type="submit" class="bg-red-600 text-white  text-sm font-bold p-4 inline-flex justify-center py-3 px-6 w-full border border-transparent shadow-sm text-sm font-medium  text-white bg-indigo-600 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
+                    <button type="submit" class="bg-red-600 transition ease-in-out duration-300 hover:bg-red-500 hover:-translate-y-1 hover:scale-110 text-white  text-sm font-bold p-4 inline-flex justify-center py-3 px-6 w-full border border-transparent shadow-sm text-sm font-medium  text-white bg-indigo-600 hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Submit</button>
                 </div>
             </form>
         </div>
@@ -360,7 +359,7 @@
                   
                        
 
-                    <footer class=" py-12 border-b bg-zinc-600	text-white">
+                    <footer class=" py-12 border-b bg-zinc-900	text-white">
         <div class="container mx-auto flex flex-col md:flex-row  justify-between items-center px-4">
             <div class="mb-4 md:mb-0">
                 <h3 class="text-2xl font-semibold">My Saloon</h3>
@@ -380,7 +379,7 @@
     </footer>
                 </div>
             </div>
-        <p class=" text-center bg-slate-800 p-1  text-white">All right reserved copyright @2024 |My Saloon</p>
+        <p class=" text-center bg-zinc-900	 p-1  text-white">All right reserved copyright @2024 |My Saloon</p>
 
         </div>
     </body>
