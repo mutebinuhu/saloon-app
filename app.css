@@ -10,3 +10,20 @@ body{
     transform: scaleX(1.1); 
      
 }
+.main-header{
+}
+.home-link{
+    position: relative;
+    color:red;
+    animation-name: anime-links;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+@keyframes  anime-links{
+        from {margin-top: 40px;}
+        to {margin-top: 0px;}
+      
+
+}
+
