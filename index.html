@@ -39,7 +39,7 @@ const fadeOutButton = document.getElementById("fadeOutButton");
         element.addEventListener("click", function() {
     // Set opacity to 1 to fade in the element
     fadeInElement.style.opacity = 1;
-    getBody.classList.add('bg-red-500')
+    fadeInElement.classList.remove('hidden');
     }); 
     });
 
@@ -47,6 +47,7 @@ const fadeOutButton = document.getElementById("fadeOutButton");
     // Set opacity to 1 to fade in the element
     fadeInElement.style.opacity = 0;
     getBody.classList.remove('opacity-25')
+    fadeInElement.classList.add('hidden')
 
     })
         })
@@ -57,7 +58,7 @@ const fadeOutButton = document.getElementById("fadeOutButton");
     <body class="font-sans antialiased  dark:bg-black dark:text-white/50">
         <div  class="">
         <div class="relative">    
-            <div id="fadeInElement" class=" w-full fixed mt-20  z-30 ">
+            <div id="fadeInElement" class=" w-full fixed mt-20 hidden md:block z-30 ">
             
                 <div class="flex justify-center" >
                     <div class=" bg-white p-8 rounded shadow-md absolute   ">
