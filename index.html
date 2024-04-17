@@ -21,10 +21,98 @@
     </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="app.js"></script>
+    <script>
 
-    <body class="font-sans antialiased dark:bg-black bg-gray-300 dark:text-white/50">
-   
-    <div class="">
+        window.addEventListener("DOMContentLoaded", ()=>{
+            // Get the button and the element to fade in
+const fadeInButton = document.querySelectorAll(".fadeInButton");
+const getBody = document.querySelector(".main");
+
+
+const fadeInElement = document.getElementById("fadeInElement");
+const fadeOutButton = document.getElementById("fadeOutButton");
+
+
+// Add event listener to the button
+    fadeInButton.forEach(element => {
+        element.addEventListener("click", function() {
+    // Set opacity to 1 to fade in the element
+    fadeInElement.style.opacity = 1;
+    getBody.classList.add('bg-red-500')
+    }); 
+    });
+
+    fadeOutButton.addEventListener("click", function() {
+    // Set opacity to 1 to fade in the element
+    fadeInElement.style.opacity = 0;
+    getBody.classList.remove('opacity-25')
+
+    })
+        })
+            
+    </script>
+
+
+    <body class="font-sans antialiased  dark:bg-black dark:text-white/50">
+        <div  class="">
+        <div class="relative">    
+            <div id="fadeInElement" class=" w-full fixed mt-20  z-30 ">
+            
+                <div class="flex justify-center" >
+                    <div class=" bg-white p-8 rounded shadow-md absolute   ">
+                        <div class="text-right">
+                            <svg id="fadeOutButton" onclick="" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-center text-red-500 cursor-pointer hide-booking-form" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </div>
+                        
+                        <h2 class="text-2xl font-bold mb-4">Book Your Appointment</h2>
+                        <form action="#" method="post">
+                            <div class="md:flex md:space-x-8">
+                                <div class="mb-2">
+                                    <label for="name" class="block text-gray-700 font-semibold mb-2">Your Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Enter your name" required>
+                                </div>
+                                <div class="mb-2">
+                                    <label for="email" class="block text-gray-700 font-semibold mb-2">Your Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <div class="mb-2">
+                                <label for="service" class="block text-gray-700 font-semibold mb-2">Select Service</label>
+                                <select id="service" name="service" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                                    <option value="">Select a service</option>
+                                    <option value="haircut">Haircut</option>
+                                    <option value="manicure">Manicure</option>
+                                    <option value="pedicure">Pedicure</option>
+                                    <option value="massage">Massage</option>
+                                    <option value="facial">Facial</option>
+                                </select>
+                            </div>
+                           <div class="md:flex justify-between">
+                            <div class="mb-2">
+                                <label for="date" class="block text-gray-700 font-semibold mb-2">Preferred Date</label>
+                                <input type="date" id="date" name="date" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            </div>
+                            <div class="mb-2">
+                                <label for="time" class="block text-gray-700 font-semibold mb-2">Preferred Time</label>
+                                <input type="time" id="time" name="time" class="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500" required>
+                            </div>
+                           </div>
+                            <div class="mb-2 mt-2 " id="">
+                                <button type="submit" class="w-full bg-red-600 text-white py-2 px-4 rounded-md hover:bg-red-500 transition fadeInButton duration-300">Book Appointment</button>
+                            </div>
+                        </form>
+                </div>
+                </div>
+            
+        </div>
+        </div>
+        </div>
+   <main>
+
+
 
     <div class="w-full h-96 bg-gray-300 bg-[url('images/barber.jpg')] bg-cover bg-center">
     <nav class=" p-4">
@@ -61,7 +149,7 @@
                 <li class="p-4   hover:bg-red-500 ">
                     Contact
                 </li>
-                <li class="book-online p-4 bg-red-600 transition ease-in-out duration-300 delay-100 hover:-translate-y-1  hover:bg-red-500 hover:scale-110 ">
+                <li id="" class="book-online fadeInButton p-4 bg-red-600 book-now transition ease-in-out duration-300 delay-100 hover:-translate-y-1  hover:bg-red-500 hover:scale-110 ">
                   
                         Book Online
                    
@@ -72,10 +160,9 @@
           <section class="mt-12 p-4 text-white text-center md:text-left banner-text-header">
             <h1 id="" class="text-4xl font-bold main-header ">Do You need a quick Hair Cut ? </h1>
             <p class="pt-4 banner-text-sub-header ">We offer the full spectrum of professional services in <span class="font-bold text-2xl">Kampala</span></p>
-            <div class="mt-12 md:mt-18">
-            <button class="bg-red-600 transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4 " href="#">
-               BOOK FREE APPOINTMENT
-            </button>
+            <div class="mt-12">
+                <a type="button" class="bg-red-600 fadeInButton transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4 "> BOOK FREE APPOINTMENT</a>
+           
             </div>
             
           </section>
@@ -117,7 +204,7 @@
                     </header>
 -->
 
-                    <main class="">
+                    <main class="main">
                         <div class="bg-slate-800 p-8 md:p-24 text-white md:flex md:space-x-12">
                             <div class="transition ease-in-out duration-300  hover:text-gray-400  hover:scale-110  bg-white h-96 md:w-1/2 bg-[url('images/barber2.jpg')]  bg-cover bg-center">
                             </div>
@@ -128,7 +215,7 @@
                                 Our team of professional stylists is just a click away. With years of experience and expertise, they're dedicated to helping you achieve your desired look effortlessly.
                                 </p>
                                 <div class="mt-12">
-                                    <button class="bg-red-600 transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4"> BOOK FREE APPOINTMENT</button>
+                                    <button class="bg-red-600 transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4 fadeInButton"> BOOK FREE APPOINTMENT</button>
                                
                                 </div>
                                 </section>
@@ -195,7 +282,7 @@
                             <p class="text-gray-700">Experience: 8 years</p>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center fadeInButton">
                         <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
                             BOOK FREE APPOINTMENT
             </button>
@@ -211,7 +298,7 @@
                             <p class="text-gray-700">Experience: 7 years</p>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center fadeInButton">
                         <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
                             BOOK FREE APPOINTMENT
             </button>
@@ -227,7 +314,8 @@
                             <p class="text-gray-700">Experience: 8 years</p>
                         </div>
                     </div>
-                    <div class="text-center">
+                    <div class="text-center fadeInButton
+                    ">
                         <button class="bg-red-600 transition -mt-10  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4" href="#">
                             BOOK FREE APPOINTMENT
             </button>
@@ -329,7 +417,7 @@
                                 
                             </div>
     </div>
-    <div class="md:w-1/2 mt-8 mx-4 md:mt-0 md:mx-0">
+    <div class="md:w-1/2 mt-8 mx-4 md:mt-0 md:mx-0 ">
         <div class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-md">
             <form>
                 <div class="mb-4">
@@ -382,8 +470,9 @@
             </div>
         <p class=" text-center bg-zinc-900	 p-1  text-white">All right reserved copyright @2024 |My Saloon</p>
 
-        </div>
+       
+
+    </main>
     </body>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer></script>
 
 </html>
