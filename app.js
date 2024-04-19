@@ -3,11 +3,15 @@ window.addEventListener("DOMContentLoaded", (event) => {
     const getFormClass = document.querySelector(".booking-form");
    getBookingClass.addEventListener("click", ()=>{
     getFormClass.classList.remove('hidden')
+    let test = document.getElementById("alert");
    })
 
    const hideBookingForm = () =>{
     console.log()
    }
+
+  
+
    const appointmentForm = document.getElementById('appointment-form');
    appointmentForm.addEventListener("submit", async(e)=>{
        e.preventDefault();
@@ -30,10 +34,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
            });
            const response = await data.json();
            console.log("data", response);
-           if(response.success){
-       
-               window.location.href = "/"
-         
+           if(response){
+    
+                setTimeout(()=>{
+              let success =  document.getElementById("alert").innerText="Appointment Sent"
+              document.querySelector('.alert').classList.add("bg-green-500");
+              document.querySelector('.alert').classList.add("p-4");
+              document.querySelector('.alert').classList.add("text-white");
+
+               window.location.href ="index.html" || "/" 
+
+                }, 3000)
+               
+            
            }
       } catch (error) {
         console.log("err", error)
