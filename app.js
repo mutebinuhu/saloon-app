@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
            console.log("data", response);
            if(response){
        
-              //  window.location.href = "index.html"
+               window.location.href = "/"
          
            }
       } catch (error) {
