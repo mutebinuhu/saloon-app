@@ -8,6 +8,36 @@ window.addEventListener("DOMContentLoaded", (event) => {
    const hideBookingForm = () =>{
     console.log()
    }
-
+   const appointmentForm = document.getElementById('appointment-form');
+   appointmentForm.addEventListener("submit", async(e)=>{
+       e.preventDefault();
+       let name = document.getElementById("name").value;
+       let phone = document.getElementById("phone").value;
+       let service = document.getElementById("service").value;
+       let date = document.getElementById("date").value;
+       let time = document.getElementById("time").value;
+       let dataObj = {name, phone, service, prefferedDate:date, prefferedTime:time};
+       console.log(dataObj)
+      
+      try {
+        const data = await fetch("http://localhost:8000/api/requests", {
+            method: 'POST',
+            headers: {
+                Accept: 'application.json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(dataObj),
+           });
+           const response = await data.json();
+           console.log("data", response);
+           if(response){
+       
+               window.location.href = "index.html"
+         
+           }
+      } catch (error) {
+        console.log("err", error)
+      }
+   })
 
   });
