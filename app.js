@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
        console.log(dataObj)
       
       try {
-        const data = await fetch("http://localhost:8000/api/requests", {
+        const data = await fetch("https://mysys-ooaz.onrender.com/api/requests", {
             method: 'POST',
             headers: {
                 Accept: 'application.json',
@@ -32,7 +32,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
            console.log("data", response);
            if(response){
        
-               window.location.href = "index.html"
+              //  window.location.href = "index.html"
          
            }
       } catch (error) {
