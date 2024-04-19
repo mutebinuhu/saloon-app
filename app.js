@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
            });
            const response = await data.json();
            console.log("data", response);
-           if(response){
+           if(response.success){
        
                window.location.href = "/"
          
