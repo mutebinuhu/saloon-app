@@ -16,8 +16,16 @@
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
 
         <!-- Styles -->
-        <style>
-        </style>
+           <style>
+        /* Custom styles */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+    </style>
+
     </head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -117,12 +125,12 @@ const fadeOutButton = document.getElementById("fadeOutButton");
 
 
 
-    <div class="w-full h-96 bg-gray-300 bg-[url('images/barber.jpg')] bg-cover bg-center">
-    <nav class=" p-4">
+    <div class="w-full relative h-96 bg-gray-300 bg-[url('images/barber.jpg')] bg-cover bg-center">
+    <nav class=" p-4 fixed z-50  bg-red-600 w-full">
         <div class="flex items-center justify-between">
             <!-- Navigation Icon -->
             <div class="flex items-center">
-                <button class="transition ease-in-out duration-300  hover:text-gray-400  hover:scale-110 text-white focus:outline-none mr-4">
+                <button class="transition ease-in-out duration-300  hover:text-gray-200  hover:scale-110 text-white focus:outline-none mr-4">
                     <!-- Your navigation icon here (e.g., hamburger icon) -->
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 " fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -159,7 +167,7 @@ const fadeOutButton = document.getElementById("fadeOutButton");
 
                     </a>
                 </li>
-                <li id="" class="book-online fadeInButton p-4 bg-red-600 book-now transition ease-in-out duration-300 delay-100 hover:-translate-y-1  hover:bg-red-500 hover:scale-110 ">
+                <li id="" class="book-online fadeInButton p-4 text-red-600 bg-white hover:text-white book-now transition ease-in-out duration-300 delay-100 hover:-translate-y-1  hover:bg-red-500 hover:scale-110 ">
                   
                         Book Online
                    
@@ -167,13 +175,17 @@ const fadeOutButton = document.getElementById("fadeOutButton");
             </ul>
         </div>
     </nav>
-          <section class="mt-12 p-4 text-white text-center md:text-left banner-text-header">
-            <h1 id="" class="text-4xl font-bold main-header ">Do You need a quick Hair Cut ? </h1>
+        <!-- Navigation bar -->
+       
+          <section class="p-4 text-white text-center md:text-left banner-text-header">
+                <div class="mt-24">
+                    <h1 id="" class="text-4xl font-bold main-header ">Do You need a quick Hair Cut ? </h1>
             <p class="pt-4 banner-text-sub-header ">We offer the full spectrum of professional services in <span class="font-bold text-2xl">Kampala</span></p>
             <div class="mt-12">
                 <a type="button" class="bg-red-600 fadeInButton transition  ease-in-out delay-100 hover:-translate-y-1 hover:scale-105 hover:bg-red-500 duration-300 text-white  text-sm font-bold p-4 "> BOOK FREE APPOINTMENT</a>
            
             </div>
+                </div>
             
           </section>
            
